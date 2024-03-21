@@ -1,12 +1,37 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+import { Component, Input } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-instructor',
   standalone: true,
-  imports: [],
+  imports: [HttpClientModule,
+    CommonModule,
+    RouterModule],
   templateUrl: './instructor.component.html',
   styleUrl: './instructor.component.css'
 })
 export class InstructorComponent {
-
+  constructor(private router: Router) {}
+  // courseName:string="";
+  // courseGrad:string="";
+  // courseSupject:string="";
+  courseStudents:number=0;
+  @Input() oneGroup:any;
+  
+  background:string="background-color: #fff";
+  
+  changeBackgroundColor(isHovered: boolean) {
+    if(isHovered)
+    {
+      this.background="background-color: rgb(214, 216, 229)";
+    }else{
+      this.background="background-color: #fff";
+    }
+    console.log(this.oneGroup);
+  }
+  redirectToCourseDetails(id:any) {
+    window.location.href = '/Details'+id;
+  }
 }

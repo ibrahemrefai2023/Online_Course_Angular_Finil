@@ -1,0 +1,31 @@
+<div class="container mt-5">
+  <h1 class="fw-bold text-success text-center">
+    اللغة العربية
+  </h1>
+  <p class=" text-black text-center">
+الصف الاولي الاعدادية
+  </p>
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg g-4 mt-5 ms-2 justify-content-evenly">
+    @for (item of arr; track $index) {
+      <div class="col">
+        <div class="card text-end border-dark rounded" style="max-width: 35rem;">
+          <div class="bg-body-secondary m-2 rounded">
+            <img src="assets\images\Children.jpg" class="mt-4 me-4 rounded-circle border border-secondary " height="100px"
+              width="100px">
+            <p class="card-text">م / حسن عادل</p>
+          </div>
+          <div class="card-body text-black">
+  
+            <p class="card-text me-4">أسم المجموعة : المجموعة أ</p>
+            <p class="card-text me-4">عدد المقاعد : 50</p>
+            <p class="card-text me-4">عدد المقاعد المتبقية : 22</p>
+            <a href="#" class="btn btn-outline-primary me-4">التفاصيل</a>
+          </div>
+        </div>
+      </div>
+    }
+    
+    
+  </div>
+
+</div>
