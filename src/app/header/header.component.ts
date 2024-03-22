@@ -24,7 +24,7 @@ export class HeaderComponent {
         this.Grades = data;
       },
       error:(err)=>{
-        this.router.navigate(['/Error',{errormessage : err.message as string}]);
+        //this.router.navigate(['/Error',{errormessage : err.message as string}]);
       }
     })
   }

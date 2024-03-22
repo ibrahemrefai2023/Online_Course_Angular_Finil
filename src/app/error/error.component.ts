@@ -10,10 +10,10 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ErrorComponent {
 
-  err:any;
+  errormessage:any;
 
   constructor(private Actived : ActivatedRoute){
-    this.err = this.Actived.snapshot.paramMap.get("errormessage");
+    this.errormessage = this.Actived.snapshot.paramMap.get("errormessage");
    }
    
 }
