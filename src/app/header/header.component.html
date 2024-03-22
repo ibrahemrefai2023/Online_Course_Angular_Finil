@@ -8,22 +8,22 @@
   <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav me-auto">
           <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link" routerLink="/Home">Home</a>
           </li>
           <li class="nav-item" style="margin-left: 15px;"> 
-              <a class="nav-link" href="about.html">About</a>
+              <a class="nav-link" routerLink="/About">About</a>
           </li>
           <li class="nav-item" style="margin-left: 15px;"> 
-              <a class="nav-link" href="courses.html">Courses</a>
+              <a class="nav-link" routerLink="/Courses">Courses</a>
           </li>
           <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" routerLink="/Grades" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Grades
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="testimonial.html">First Preparatory Grade</a></li>
-                  <li><a class="dropdown-item" href="testimonial.html">Second Preparatory Grade</a></li>
-                  <li><a class="dropdown-item" href="testimonial.html">Third Preparatory Grade </a></li>
+                @for (Grade of Grades; track $index) {
+                  <li><a class="dropdown-item" routerLink="/Grades{{Grade.GradeId}}">{{Grade.GradeName}}</a></li>
+                }
               </ul>
           </li>
           <li class="nav-item">
