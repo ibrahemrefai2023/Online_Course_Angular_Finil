@@ -16,5 +16,6 @@ import { ProfileComponent } from './Instructor/instructor/Profile/profile/profil
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  title: any;
 
 }

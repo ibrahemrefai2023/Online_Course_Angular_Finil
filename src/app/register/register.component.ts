@@ -1,7 +1,7 @@
 import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { RegistrationService } from '../../Service/Account.service';
+import { AccountService } from '../../Service/Account.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -11,13 +11,13 @@ import { Router } from '@angular/router';
     HttpClientModule
 
   ],
-  providers: [RegistrationService],
+  providers: [AccountService],
   templateUrl: './register.component.html',
   styleUrl: './register.component.css'
 })
 export class RegisterComponent {
 
-  constructor(private data: RegistrationService, private router: Router) { }
+  constructor(private data: AccountService, private router: Router) { }
 
   myform = new FormGroup({
 
@@ -74,7 +74,7 @@ export class RegisterComponent {
         role: this.myform.controls.name.value as string
 
       };
-      this.data.ADDNewusers(newuser).subscribe();
+      this.data.AddNewUser(newuser).subscribe();
       this.router.navigate(['/']);
     }
   }
