@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterModule } from '@angular/router';
+import { Router, RouterLink, RouterModule } from '@angular/router';
+import { GradeService } from '../../Service/grade.service';
 
 @Component({
   selector: 'app-header',
@@ -12,5 +13,20 @@ import { RouterLink, RouterModule } from '@angular/router';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
+
+  Grades:any = [];
+
+  constructor(private GradeService:GradeService , private router: Router){ }
+
+  ngOnInit(): void {
+    this.GradeService.getAllGrades().subscribe({
+      next:(data)=>{
+        this.Grades = data;
+      },
+      error:(err)=>{
+        this.router.navigate(['/Error',{errormessage : err.message as string}]);
+      }
+    })
+  }
 
 }

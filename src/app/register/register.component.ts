@@ -1,7 +1,7 @@
 import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { RegistrationService } from '../../Service/registration.service';
+import { RegistrationService } from '../../Service/Account.service';
 import { Router } from '@angular/router';
 
 @Component({
