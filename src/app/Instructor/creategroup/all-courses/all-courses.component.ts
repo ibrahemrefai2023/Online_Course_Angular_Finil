@@ -1,18 +1,18 @@
-import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
 import { Component, Input } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
+import { CourseibrahemService } from '../../../../Service/courseibrahem.service';
 
 @Component({
-  selector: 'app-instructor',
+  selector: 'app-all-courses',
   standalone: true,
-  imports: [HttpClientModule,
-    CommonModule,
-    RouterModule],
-  templateUrl: './instructor.component.html',
-  styleUrl: './instructor.component.css'
+  imports: [HttpClientModule,CommonModule,RouterModule],
+  providers:[CourseibrahemService],
+  templateUrl: './all-courses.component.html',
+  styleUrl: './all-courses.component.css'
 })
-export class InstructorComponent {
+export class AllCoursesComponent  {
   constructor(private router: Router) {}
   // courseName:string="";
   // courseGrad:string="";
@@ -21,7 +21,6 @@ export class InstructorComponent {
   @Input() oneGroup:any;
   
   background:string="background-color: #fff";
-  
   changeBackgroundColor(isHovered: boolean) {
     if(isHovered)
     {
