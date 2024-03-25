@@ -17,6 +17,9 @@ import { StepsCreateComponent } from './Instructor/Profile/steps-create/steps-cr
 import { InstgroupsComponent } from './Instructor/instgroups/instgroups.component';
 import { CreateexamComponent } from './Instructor/createExam/createexam/createexam.component';
 import { AddGroupComponent } from './Instructor/creategroup/add-group/add-group.component';
+import { DashBoardGradeOneComponent } from './Instructor/creategroup/dash-board-grade-one/dash-board-grade-one.component';
+import { DashBoardGradeTwoComponent } from './Instructor/creategroup/dash-board-grade-two/dash-board-grade-two.component';
+import { DashBoardGradeThreeComponent } from './Instructor/creategroup/dash-board-grade-three/dash-board-grade-three.component';
 
 export const routes: Routes = [
     {path:"",redirectTo:"Home",pathMatch:"full"},
@@ -35,7 +38,9 @@ export const routes: Routes = [
     {path:"MYGroup",component:InstgroupsComponent},
     {path:"createExam",component:CreateexamComponent},
     {path:"createGroup",component:AddGroupComponent},
-
+    {path:"First",component:DashBoardGradeOneComponent},
+    {path:"Second",component:DashBoardGradeTwoComponent},
+    {path:"Third",component:DashBoardGradeThreeComponent},
 
     {path:"**",component:ErrorComponent}
 

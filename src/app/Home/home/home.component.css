@@ -63,8 +63,8 @@
 }
 /*  */
 .container {
-  padding-left: 15px; 
-  padding-right: 15px; 
+  padding-left: auto; 
+  padding-right: auto; 
   margin-left: auto; 
   margin-right: auto; 
 }
@@ -77,14 +77,6 @@
   background-color: lightblue; 
   padding: 20px; 
   height: 100%; 
-}
-.y1 {
-  border: none;
-  border-radius: 20px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
-  transition: all 0.3s ease;
-  background-color: lightblue;
-  padding: 20px; 
 }
 
 .card:hover {
@@ -129,7 +121,7 @@
 }
 .custom-card-text {
   font-family: Arial, sans-serif; 
-  width: 90%; 
+   width: 90%; 
 }
 
 /*  */
@@ -178,9 +170,55 @@
 
 footer {
   bottom: 0;
-  width: 100%;
+  width: auto;
   background-color: lightblue;
 }
 .text-center p {
   color: black; 
+}
+
+
+@media (max-width: 992px) {
+  .col-md-7 {
+    margin-top: 20px;
+    margin-right: 0;
+  }
+
+  .card-img {
+    width: 100%; 
+  }
+
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button-container .btn {
+    width: 100%; 
+  }
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .col-md-5,
+  .col-md-7 {
+    margin-top: 20px; 
+  }
+
+  .custom-button {
+    width: 100%; 
+  }
+}
+
+@media (max-width: 576px) {
+  .col-md-7 {
+    margin-top: 20px;
+    margin-right: 0;
+  }
 }
