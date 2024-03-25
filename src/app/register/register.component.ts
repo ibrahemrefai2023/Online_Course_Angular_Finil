@@ -51,29 +51,7 @@ onSubmit() {
  
 
 
-  // myform: FormGroup;
-  // constructor(private fb: FormBuilder, private yourService: JwtService) {
-  //   this.myform = this.fb.group({
-  //     username: ['', Validators.required],
-  //     email: ['', [Validators.required, Validators.email]],
-  //     password: ['', [Validators.required, Validators.minLength(6)]],
-  //     confirmPassword: ['', Validators.required],
-  //     role: ['', Validators.required]
-  //   });
-  // }
-
-  // addNewUser() {
-  //   if (this.myform.valid) {
-      
-  //     this.yourService.submitForm(this.myform.value)
-  //       .subscribe((response: any) => {
-  //         console.log(response);
-  //         console.log("success")
-  //       }, (error: any) => { // Change 'any' to the expected type
-  //         console.error(error);
-  //       });
-  //   }
-  // }
+  
   
   // myform = new FormGroup({
 
