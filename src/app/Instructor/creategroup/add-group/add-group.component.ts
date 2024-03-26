@@ -18,10 +18,12 @@ export class AddGroupComponent {
   constructor(private courseservice:CourseibrahemService){};
   
   ngOnInit(): void {
-    this.courseservice.getAllGroups().subscribe({
-      next:(data)=>{this.groups=data},
-        error:(err)=>{}
-    });
+
+    // this.courseservice.getAllGroups().subscribe({
+    //   next:(data)=>{this.groups=data},
+    //     error:(err)=>{}
+    // });
+    
   }
   
   showDashBoard:boolean=false;

@@ -6,30 +6,38 @@ import { Router, RouterLink, RouterModule } from '@angular/router';
 @Component({
   selector: 'app-chooseinstructor',
   standalone: true,
-  imports: [CommonModule,FormsModule, RouterLink,
+  imports: [CommonModule, FormsModule, RouterLink,
     RouterModule],
   templateUrl: './chooseinstructor.component.html',
   styleUrl: './chooseinstructor.component.css'
 })
 export class ChooseinstructorComponent {
+
   items: any[] = [
     {
       photo: 'assets/images/teacher1.jpeg',
       alt: 'Photo 1',
       description: ' MR/Mohamed AbdElhamid ',
-      button1: { label: ' Enroll', clicked: false }, // Add clicked property
-      button2: { label: ' Details', clicked: false } // Add clicked property
+      button1: { label: ' Enroll', clicked: false },
+      button2: { label: ' Details', clicked: false }
     },
-    // Add more items as needed
+    {
+      photo: 'assets/images/teacher1.jpeg',
+      alt: 'Photo 1',
+      description: ' MR/Mohamed AbdElhamid ',
+      button1: { label: ' Enroll', clicked: false },
+      button2: { label: ' Details', clicked: false }
+    }
   ];
 
   constructor() { }
-  clicked: boolean = false;
+
+  
+
   ngOnInit(): void {
   }
-  toggleClicked(button: any) {
-    button.clicked = !button.clicked;
-}
+
+  
 
 
 }
