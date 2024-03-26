@@ -23,7 +23,7 @@
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 @for (Grade of Grades; track $index) {
-                  <li><a class="dropdown-item" routerLink="/Grades{{Grade.GradeId}}">{{Grade.GradeName}}</a></li>
+                  <li><a class="dropdown-item" routerLink="/Grades/{{Grade.grade_ID}}">{{Grade.grade_Name}}</a></li>
                 }
               </ul>
           </li>

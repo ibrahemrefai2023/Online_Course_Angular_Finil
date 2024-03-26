@@ -14,19 +14,22 @@ import { GradeService } from '../../Service/grade.service';
 })
 export class HeaderComponent {
 
-  Grades:any = [];
+  Grades:any;
 
-  constructor(private GradeService:GradeService , private router: Router){ }
+  constructor(private readonly GradeService:GradeService , private router: Router){ }
 
   ngOnInit(): void {
+
     this.GradeService.getAllGrades().subscribe({
       next:(data)=>{
         this.Grades = data;
       },
       error:(err)=>{
-        //this.router.navigate(['/Error',{errormessage : err.message as string}]);
+        this.router.navigate(['/Error',{errormessage : err.message as string}]);
       }
     })
+
   }
+
 
 }
