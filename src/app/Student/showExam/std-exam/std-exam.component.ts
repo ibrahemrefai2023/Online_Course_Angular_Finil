@@ -1,11 +1,10 @@
 import { HttpClientModule } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Route, Router, RouterModule } from '@angular/router';
-
 import { CommonModule } from '@angular/common';
-import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import {  FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { CourseService } from '../../../../Service/course.service';
 import { CourseibrahemService } from '../../../../Service/courseibrahem.service';
-
 
 @Component({
   selector: 'app-std-exam',
@@ -18,7 +17,7 @@ ReactiveFormsModule
 
   ],
   providers:[
-    CourseibrahemService
+    CourseService
   ],
   templateUrl: './std-exam.component.html',
   styleUrl: './std-exam.component.css'
@@ -28,16 +27,18 @@ export class StdExamComponent implements OnInit {
     answer:new FormControl(null,[Validators.required])
   })
   ID=0;
-  examid:any
+  selectedAnswers:any
   student:any[]=[];
   std:any
   username="";
- 
+ oneExam:any
 
-constructor(active:ActivatedRoute, private myservice:CourseibrahemService,private router:Router)
+
+
+constructor( private myservice:CourseibrahemService,private router:Router,Active:ActivatedRoute)
 {
   
-this.ID=active.snapshot.params["id"]
+  this.ID=Active.snapshot.params["id"]
 }
 ngOnInit():void
 {
@@ -47,8 +48,9 @@ ngOnInit():void
     error:(err)=>console.log(err)
   })
 
+  
   this.myservice.getExambyid(this.ID).subscribe({
-    next:(data)=>this.examid=data,
+    next:(data)=>this.oneExam=data,
     error:(err)=>console.log(err)
   })
 

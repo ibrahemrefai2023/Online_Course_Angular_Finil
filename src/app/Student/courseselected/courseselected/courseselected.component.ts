@@ -2,10 +2,14 @@ import { Component } from '@angular/core';
 
 
 import { HttpClientModule } from '@angular/common/http';
-import { MainComponent } from '../main/main.component';
-import { MainUComponent } from '../main-u/main-u.component';
+
+
 import { CourseibrahemService } from '../../../../Service/courseibrahem.service';
 import { RouterLink, RouterModule } from '@angular/router';
+import { MainComponent } from '../main/main.component';
+import { MainUComponent } from '../main-u/main-u.component';
+
+
 
 
 @Component({
@@ -13,10 +17,9 @@ import { RouterLink, RouterModule } from '@angular/router';
   standalone: true,
   imports: [
  MainComponent,
- MainUComponent,
  HttpClientModule,
  RouterLink,
- RouterModule
+ RouterModule,MainUComponent
     
   ],
   providers:[
