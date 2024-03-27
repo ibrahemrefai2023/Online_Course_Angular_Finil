@@ -49,7 +49,7 @@ import { InstructordashboardComponent } from './Instructor/instructorfinalDashbo
     StdExamComponent,SendComponent,StdExamEnrollComponent,DashBoardGradeOneComponent,DashBoardGradeTwoComponent,
     DashBoardGradeThreeComponent,Grade1Component,Grade2Component,Grade3Component,AddGroupComponent
     ,choosegradeComponent,AllCoursesComponent,ChooseinstructorComponent,choosegradeComponent,InstructorDateHeaderComponent,
-    InstructorDataComponent,InstructordatatwoComponent,TermsAndAdvicesComponent,InstructordashboardComponent
+    InstructorDataComponent,InstructordatatwoComponent,TermsAndAdvicesComponent,InstructordashboardComponent,MainComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
